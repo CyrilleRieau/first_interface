@@ -21,6 +21,9 @@ var Chat = /** @class */ (function () {
     Chat.prototype.emettreSon = function () {
         return 'Miaule';
     };
+    Chat.prototype.getInfo = function () {
+        return "Chat : nom = " + this.nom + " couleur = " + this.couleur;
+    };
     return Chat;
 }());
 exports.Chat = Chat;

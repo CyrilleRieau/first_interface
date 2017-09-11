@@ -21,6 +21,9 @@ var Chien = /** @class */ (function () {
     Chien.prototype.emettreSon = function () {
         return 'Aboie';
     };
+    Chien.prototype.getInfo = function () {
+        return "Chien : nom = " + this.nom + " race = " + this.race;
+    };
     return Chien;
 }());
 exports.Chien = Chien;

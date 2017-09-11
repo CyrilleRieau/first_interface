@@ -1,5 +1,6 @@
 import { AnimalCompagnie } from "./animalCompagnie";
-export class Chat implements AnimalCompagnie{
+import { Savable } from "./savable";
+export class Chat implements AnimalCompagnie, Savable {
     nom:string;
     couleur:string;
     constructor(nom : string, couleur : string) {
@@ -17,6 +18,10 @@ export class Chat implements AnimalCompagnie{
     };
     emettreSon(): string{
         return 'Miaule';
+    }
+
+    getInfo():string{
+        return "Chat : nom = " +this.nom + " couleur = " + this.couleur;
     }
 }
 let cat = new Chat('bibou', 'bleu');

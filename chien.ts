@@ -1,7 +1,8 @@
 import { AnimalCompagnie } from "./animalCompagnie";
+import { Savable } from "./savable";
 
 
-export class Chien implements AnimalCompagnie{
+export class Chien implements AnimalCompagnie, Savable {
     nom:string;
     race:string;
     constructor(nom : string, race : string) {
@@ -19,6 +20,9 @@ export class Chien implements AnimalCompagnie{
     };
     emettreSon():string{
         return 'Aboie';
+    }
+    getInfo():string{
+        return "Chien : nom = " +this.nom + " race = " + this.race;
     }
 }
 let dog = new Chien('fifo','bichon');
